@@ -1,0 +1,68 @@
+<%- include('layouts/header.ejs') %>
+    </head>
+
+    <body>
+        <!-- Navigation-->
+        <%- include('layouts/nav.ejs') %>
+            <!-- Page Header-->
+            <header class="masthead" style="background-image: url('/assets/img/login.jpg')">
+                <div class="container position-relative px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <div class="page-heading">
+                                <h1>Welcome Back!</h1>
+                                <!-- <span class="subheading">Have questions? I have answers.</span> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Main Content-->
+            <main class="mb-4">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+
+                            <div class="my-5">
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- * * SB Forms Contact Form * *-->
+                                <!-- * * * * * * * * * * * * * * *-->
+                                <!-- This form is pre-integrated with SB Forms.-->
+                                <!-- To make this form functional, sign up at-->
+                                <!-- https://startbootstrap.com/solution/contact-forms-->
+                                <!-- to get an API token!-->
+                                <form action="/users/login" method="POST" enctype="multipart/form-data">
+                                    <div class="form-floating">
+                                        <input class="form-control" name="username" id="username" type="text"
+                                            placeholder="Username..." data-sb-validations="required" />
+                                        <label for="name">Username</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">A Username is
+                                            required.</div>
+                                    </div>
+
+                                    <div class="form-floating">
+                                        <input class="form-control" name="password" id="password" type="password"
+                                            placeholder="Password..." data-sb-validations="required" />
+                                        <label for="name">Password</label>
+                                        <div class="invalid-feedback" data-sb-feedback="name:required">A Password is
+                                            required.</div>
+                                    </div>
+
+                                    <br />
+
+                                    <!-- Submit Button-->
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary"
+                                            id="sendMessageButton">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <%- include('layouts/footer.ejs') %>
+                <%- include('layouts/script.ejs') %>
+    </body>
+
+    </html>
